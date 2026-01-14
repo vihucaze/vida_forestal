@@ -1,0 +1,7 @@
+window.APP_CONFIG = {
+    EMAILJS_SERVICE_ID: 'TU_SERVICE_ID_AQUI',
+    EMAILJS_TEMPLATE_ID: 'TU_TEMPLATE_ID_AQUI', 
+    EMAILJS_PUBLIC_KEY: 'TU_PUBLIC_KEY_AQUI',
+    WHATSAPP_NUMBER: '549XXXXXXXXX'
+};
+console.log("⚠️ Configuración de ejemplo cargada");

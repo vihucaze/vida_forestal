@@ -1,0 +1,20 @@
+# CONFIGURACIONES LOCALES / SENSIBLES
+.env
+.env.local
+.env.*.local
+
+# Configuración real (NO subir)
+js/config.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

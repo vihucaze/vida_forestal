@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Vida Forestal</title>
+    <meta name="description" content="Contáctanos para consultas, cotizaciones y asesoramiento profesional. Estamos aquí para ayudarte con tus proyectos.">
+    <link rel="shortcut icon" href="./img/Logos/data-globe.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-img" src="./img/Logos/write.png" alt="VidaForestal">
+            <h2 class="nombre">Vida Forestal</h2>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Soluciones.html">Soluciones</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>                
+                <li><a href="Contacto.html" class="active">Contacto</a></li>
+            </ul>         
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menú" aria-expanded="false">☰</button>
+    </header>
+
+    <section class="hero-contacto">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline class="video-fondo">
+                <source src="./video/contact-bg.mp4" type="video/mp4">
+                <source src="./video/trees.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 data-aos="fade-up">CONTÁCTANOS</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Estamos para ayudarte
+            </p>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Respuesta</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratuito</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">Expertos</div>
+                    <div class="stat-label">Especializados</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="contacto-principal">
+            <div class="container">
+                <div class="contacto-grid">
+                    <div class="formulario-section" data-aos="fade-right">
+                        <div class="form-header">
+                            <h2>Envíanos tu Consulta</h2>
+                            <p>Déjanos tus datos y nuestro equipo se pondrá en contacto contigo en menos de 24 horas.</p>
+                        </div>
+
+                        <form id="formulario-contacto" class="formulario-contacto">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo *</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="empresa">Empresa / Organización</label>
+                                    <input type="text" id="empresa" name="empresa">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono *</label>
+                                    <input type="tel" id="telefono" name="telefono" required>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="servicio">Servicio de Interés *</label>
+                                <select id="servicio" name="servicio" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="vivero">🌿 Vivero y Plantas</option>
+                                    <option value="agroquimicos">🧪 Agroquímicos</option>
+                                    <option value="poda">✂️ Poda y Paisajismo</option>
+                                    <option value="consultoria">📊 Consultoría Forestal</option>
+                                    <option value="agricultura">🚜 Agricultura de Precisión</option>
+                                    <option value="topografia">📐 Topografía y Geomática</option>
+                                    <option value="estudio-ambiental">🌍 Estudio de Impacto Ambiental</option>
+                                    <option value="otro">⚡ Otro servicio</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="proyecto">Descripción *</label>
+                                <textarea id="proyecto" name="proyecto" rows="5" placeholder="Describe brevemente tu consulta..." required></textarea>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Deseo recibir información sobre novedades y promociones</label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-submit">
+                                    <span class="btn-text">Enviar Consulta</span>
+                                    <div class="btn-loading">
+                                        <div class="spinner"></div>
+                                        Enviando...
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="form-footer">
+                                <p>* Campos obligatorios. Tus datos están protegidos.</p>
+                            </div>
+                        </form>
+
+                        <div id="mensaje-exito" class="mensaje-exito">
+                            <div class="exito-icon">✅</div>
+                            <h3>¡Consulta Enviada Exitosamente!</h3>
+                            <p>Hemos recibido tu mensaje. Nos pondremos en contacto contigo en menos de 24 horas.</p>
+                            <button class="btn btn-outline" id="nueva-consulta">Enviar Nueva Consulta</button>
+                        </div>
+                    </div>
+
+                    <div class="info-section" data-aos="fade-left">
+                        <div class="info-card">
+                            <h3>Información de Contacto</h3>
+                            
+                            <div class="contacto-item">
+                                <div class="contacto-icon">📧</div>
+                                <div class="contacto-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:vidaforestal3@gmail.com">vidaforestal3@gmail.com</a>
+                                    <p>Respuesta en menos de 24 horas</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon">🏢</div>
+                                <div class="contacto-info">
+                                    <h4>Oficina Central</h4>
+                                    <p>Av. Belgrano 3021<br>Ciudad Autónoma de Buenos Aires</p>
+                                    <p class="horario">Lunes a Viernes: 8:00 - 18:00</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icon">🌱</div>
+                                <div class="contacto-info">
+                                    <h4>Vivero</h4>
+                                    <p>Arturo Seguí, La Plata<br>Buenos Aires, Argentina</p>
+                                    <p class="horario">Lunes a Sábado: 7:00 - 17:00</p>
+                                </div>
+                            </div>
+
+                            <div class="redes-contacto">
+                                <h4>Síguenos en Redes</h4>
+                                <div class="redes-grid">
+                                    <a href="https://www.instagram.com/forestal_vida/" class="red-social">
+                                        <img src="./img/Logos/L_Instagram.jpg" alt="Instagram">
+                                        <span>Instagram</span>
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=100095056125139" class="red-social">
+                                        <img src="./img/Logos/L_Facebook.jpg" alt="Facebook">
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="servicios-rapidos">
+                            <h3>Consulta Rápida</h3>
+                            <div class="servicios-grid">
+                                <a href="https://wa.me/5491126958481?text=Hola!%20Estoy%20interesado%20en%20plantas%20del%20vivero" class="servicio-rapido">
+                                    <span class="servicio-icon">🌿</span>
+                                    <span class="servicio-text">Consultar Vivero</span>
+                                </a>
+                                <a href="https://wa.me/5491126958481?text=Hola!%20Necesito%20cotización%20de%20agroquímicos" class="servicio-rapido">
+                                    <span class="servicio-icon">🧪</span>
+                                    <span class="servicio-text">Cotizar Agroquímicos</span>
+                                </a>
+                                <a href="https://wa.me/5491126958481?text=Hola!%20Quiero%20información%20sobre%20servicios%20profesionales" class="servicio-rapido">
+                                    <span class="servicio-icon">👨‍🌾</span>
+                                    <span class="servicio-text">Servicios Profesionales</span>
+                                </a>
+                                <a href="https://wa.me/5491126958481?text=Hola!%20Busco%20asesoramiento%20técnico" class="servicio-rapido">
+                                    <span class="servicio-icon">💡</span>
+                                    <span class="servicio-text">Asesoramiento Técnico</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mapa-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>Visítanos</h2>
+                    <p>Te esperamos en nuestras instalaciones para atenderte personalmente</p>
+                </div>
+                
+                <div class="mapa-container" data-aos="fade-up">
+                    <div class="mapa-info">
+                        <h3>Oficina Central - CABA</h3>
+                        <p>📍 Av. Belgrano 3021, Ciudad Autónoma de Buenos Aires</p>
+                        <p>🕐 Lunes a Viernes: 8:00 - 18:00</p>
+                        <p>📞 +54 9 11 2695-8481</p>
+                        <a href="https://maps.google.com/?q=Av.Belgrano 3021, CABA" class="btn btn-outline" target="_blank">
+                            🗺️ Cómo llegar
+                        </a>
+                    </div>
+                    <div class="mapa-embed">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.722238593937!2d-58.41078972446623!3d-34.61175757295325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf2b5b5a5a5%3A0x8c2a3bbdd9158f39!2sAv.%20Belgrano%203021%2C%20C1210AAA%20CABA!5e0!3m2!1ses!2sar!4v1691186826985" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>Preguntas Frecuentes</h2>
+                    <p>Respuestas rápidas a las consultas más comunes</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item" data-aos="fade-up">
+                        <div class="faq-question">
+                            <h4>¿Cuánto tiempo tardan en responder?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Respondemos todas las consultas en menos de 24 horas hábiles. Para urgencias, recomendamos contactarnos por WhatsApp para respuesta inmediata.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="faq-question">
+                            <h4>¿Realizan envíos a todo el país?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, realizamos envíos a todo el país. Los tiempos y costos varían según la ubicación y el tipo de producto (plantas, agroquímicos, etc.).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="faq-question">
+                            <h4>¿Ofrecen asesoramiento técnico gratuito?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, ofrecemos una primera consulta de asesoramiento totalmente gratuita para evaluar tu proyecto y recomendarte la mejor solución.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="faq-question">
+                            <h4>¿Tienen precios para grandes volúmenes?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutamente. Para proyectos grandes, empresas o compras al por mayor ofrecemos descuentos especiales y condiciones personalizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="./img/Logos/data-globe.png" alt="Vida Forestal">
+                </div>
+                <div class="terms">
+                    Tu éxito es nuestro compromiso.
+                </div>
+            </div>
+            <div class="box__footer">
+                <h3>Soluciones</h3>
+                <a href="Soluciones.html#forestal">Soluciones forestales</a>
+                <a href="Soluciones.html#agronomia">Soluciones agronómicas</a>
+                <a href="Soluciones.html#analisis">Análisis espacial</a>
+                <a href="Soluciones.html#ambiental">Servicios ambientales</a>
+            </div>
+            <div class="box__footer">
+                <h3>Servicios</h3>
+                <a href="Servicios.html#vivero">Vivero</a>
+                <a href="Servicios.html#agroquimicos">Agroquimicos</a>
+                <a href="Servicios.html#servicios-profesionales">Paisajismo</a>
+                <a href="Servicios.html#servicios-profesionales">Poda</a>
+            </div>
+            <div class="box__footer">
+                <h3>Contáctanos</h3>
+                <a href="https://www.instagram.com/forestal_vida/">
+                    <img src="./img/Logos/L_Instagram.jpg" alt="Instagram">Instagram
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100095056125139">
+                    <img src="./img/Logos/L_Facebook.jpg" alt="facebook">Facebook
+                </a>
+                <a href="mailto:vidaforestal3@gmail.com">
+                    <img src="./img/Logos/L_Mail.jpg" alt="Correo">Mail
+                </a>
+                <a href="https://wa.me/5491126958481">
+                    <img src="./img/Logos/L_WhatsApp.png" alt="WhatsApp">WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="box__copy">
+            <hr>
+            <p>Transformando ideas en proyectos sostenibles</p>
+            <p>&copy; Vida Forestal <span id="current-year">2023</span> - <b>Todos los derechos reservados / Ingeniería Creativa</b></p>      
+        </div> 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/contacto.js"></script>
+</body>
+</html>
