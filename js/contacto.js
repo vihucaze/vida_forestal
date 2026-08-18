@@ -374,8 +374,9 @@ class ContactForm {
     getServiceName(serviceKey) {
         const services = {
             'vivero': '🌿 Vivero y Plantas',
-            'agroquimicos': '🧪 Agroquímicos',
-            'poda': '✂️ Poda y Paisajismo',
+            'agroquimicos': '🧪 Agroquímicos (Pausado)',
+            'paisajismo': '🎨 Diseño de Paisajismo',
+            'poda': '✂️ Poda y Tala Controlada',
             'consultoria': '📊 Consultoría Forestal',
             'agricultura': '🚜 Agricultura de Precisión',
             'topografia': '📐 Topografía y Geomática',
@@ -449,9 +450,13 @@ class ContactForm {
             'warning': '⚠️'
         };
         
+        const escapedMessage = typeof message === 'string' 
+            ? message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;")
+            : message;
+        
         notification.innerHTML = `
             <span class="notification-icon">${icons[type] || icons.info}</span>
-            <span class="notification-text">${message}</span>
+            <span class="notification-text">${escapedMessage}</span>
             <button class="notification-close" aria-label="Cerrar notificación">&times;</button>
         `;
         
